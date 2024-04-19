@@ -1,0 +1,23 @@
+body{
+    background-image: url(https://i.pinimg.com/564x/8a/5c/f5/8a5cf5621330508d5f12deb062bf3480.jpg);
+    background-size: cover;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 2%;
+
+}
+#container>div{
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+select{
+    width: 100%;
+    padding: 1%;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
