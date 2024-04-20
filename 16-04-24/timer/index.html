@@ -5,8 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            background-color: burlywood;
+            border: none;
+            padding-left:20px ;
+            padding-bottom:20px ;
+            padding-right:15px ;
+            padding-top:15px ;
+        }
+    div {
+            margin-bottom: 20px;
+         
+        }
+
+    input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 60px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+     button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #239f25;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+     button:not(:last-child) {
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #24c775;
+        }
+</style>
 <body>
-    
+ 
+    <div id="container" style="display: block;">
+        <div style="display: flex; justify-content: center;"><h1>TIMER</h1></div>
+
     <div>
         <input id="hour" type="text" placeholder="Hour">
         <input id="min" type="text" placeholder="Min">
@@ -16,7 +70,7 @@
         <button id="start">Start</button>
         <button id="pause">Pause</button>
         <button id="reset">Reset</button>
-    </div>
+    </div></div>
 </body>
 <script src="index.js"></script>
 </html>
