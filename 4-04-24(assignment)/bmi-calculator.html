@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check your BMI</h1>
+    <div id="container">
+        <p>Enter your weight and height below to check your BMI results </p>
+    <p>Put your weight in here (KG)</p>
+    <input type="text" id="kg" onchange="">
+    <p>And your height in here (CM)</p>
+    <input type="text" id="cm">
+    <button onclick="getValue()">Calculate BMI</button>
+    
+    </div>
+</body>
+<script>
+    let container=document.getElementById('container')
+let kgValue=document.getElementById('kg');
+let cmValue=document.getElementById('cm');
+  let p=document.createElement('p');
+function getValue(){
+    let kg=parseFloat(kgValue.value);
+    let cm=parseFloat(cmValue.value)
+   
+ let result=kg/((cm/100)*(cm/100))
+ let category;
+
+ if(result<=18.4){
+  category='UnderWeight'
+    
+ }
+if(result>=18.4&&result<=24.9){
+ category='Normal Weight'
+    // p.innerText =`Your BMI is ${result} which means You are ${category}`
+ }
+ if(result>=25&&result<=29.9){
+   category='OverWeight'
+    // p.innerText =`Your BMI is ${result} which means You are ${category}`
+ }
+ if(result>=30){
+  category='Obese'
+    // p.innerText =`Your BMI is ${result} which means You are ${category}`
+ }
+
+  p.innerText =`Your BMI is ${result.toFixed(1)} which means You are ${category}`
+
+ 
+
+    
+}
+container.appendChild(p)
+
+
+
+</script>
+</html>

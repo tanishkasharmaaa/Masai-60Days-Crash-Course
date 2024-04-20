@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: block;
+      text-align: center;
+      font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    #container2{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+    }
+    #container2>div{
+        text-align: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 10px;
+        overflow: hidden;
+        line-height: 15px;
+    }
+    
+</style>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+let data=[
+    {
+        img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"Vijay Shekhar Sharma",
+        position:"Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+    },
+    {
+        img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+        name:"Kunal Shah",
+        position:"Founder",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+    },
+    {
+        img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+        name:"Amrish Rau",
+        position:"CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+    },
+    {
+        img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+        name:"Sampad Swain",
+        position:"Co-Founder & CEO",
+        logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+    },
+]
+
+   let container =document.getElementById('container')
+   let heading=document.createElement('h1');
+   let container2=document.createElement('div')
+   container2.id="container2"
+   heading.innerText="Strategic Investors"
+   container.append(heading,container2)
+
+   data.map((ele)=>{
+    //creation
+    let div=document.createElement('div')
+    let image=document.createElement('img')
+    let heading=document.createElement('h2');
+    let para=document.createElement('p')
+   let logo=document.createElement('img')
+
+   // providing elements item
+   image.src=ele.img;
+   heading.innerText=ele.name;
+   para.innerText=ele.position;
+   logo.src=ele.logo
+
+  // editing
+
+  logo.style.width="150px";
+  logo.style.marginTop="-10px"
+
+    div.append(image,heading,para,logo)
+
+    container2.append(div)
+   })
+
+
+</script>
+</html>

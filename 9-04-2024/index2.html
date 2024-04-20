@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    <input type="text" placeholder="add task">
+    <select name="" id="">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+    <button>Add task</button>
+</div>
+<div class="empty"></div>
+<table>
+<thead>
+    <th>S.no</th>
+    <th>To Do Name</th>
+    <th>Priority</th>
+    <th>Delete</th>
+</thead>
+<tbody>
+   
+</tbody>
+</table>
+</body>
+<script>
+    let ToDoName=document.querySelector('#container>input');
+    let Priority=document.querySelector('#container>select');
+    let addTask=document.querySelector('#container>button');
+let empty=document.querySelector('.empty');
+let tbody=document.querySelector('tbody')
+   addTask.addEventListener('click',handleTask);
+
+   let data=[]
+   
+function saveData(item){
+localStorage.setItem('data',JSON.stringify(item))
+}
+function loadData(){
+    let get=JSON.parse(localStorage.getItem('data'))
+console.log(get)
+}
+function showData(item){
+let get=JSON.parse(localStorage.getItem('data'));
+tbody.innerHTML=''
+if(get===null){
+  let h1=document.createElement('h1');
+  h1.innerText='NO TASK IS THERE ,PLEASE CREATE THE TASK FIRST';
+  h1.style.color='grey';
+ empty.append(h1)
+}
+else{
+   get.forEach((ele,i)=>{
+let tr=document.createElement('tr');
+let td1=document.createElement('td');
+let td2=document.createElement('td');
+let td3=document.createElement('td');
+let td4=document.createElement('td');
+let btn=document.createElement('button');
+
+td1.innerText=parseFloat(i+1);
+td2.innerText=ele.title;
+td3.innerText=ele.priority;
+btn.innerText='Delete';
+
+if(td3.innerText==='High'){
+    td3.style.backgroundColor='lightGreen'
+}
+if(td3.innerText==='Medium'){
+    td3.style.backgroundColor='yellow'
+}
+if(td3.innerText==='Low'){
+    td3.style.backgroundColor='red'
+}
+
+btn.addEventListener('click',function(){
+    handleDelete(i)
+    
+})
+
+td4.append(btn)
+tr.append(td1,td2,td3,td4)
+tbody.append(tr)
+   })
+}
+}
+
+function handleDelete(index){
+   console.log(index);
+   data.splice(index,1);
+   saveData(data);
+   showData(data)
+}
+   function handleTask(){
+    let tr1=document.createElement('tr');
+    let TodoValue=ToDoName.value;;
+    let PriorityValue=Priority.value;
+ 
+  
+    let obj={
+        title:TodoValue,
+        priority:PriorityValue,
+}
+  data.push(obj);
+  saveData(data);
+showData(data)
+   }
+   showData(data)
+  loadData()
+ 
+
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+<div id="separateContainer"></div>
+
+<div>
+   
+</div>
+    </div>
+</body>
+<script>
+// creation
+let num1=document.createElement('input');
+let num2=document.createElement('input');
+let button_div=document.createElement('div');
+
+
+let operatorArr=['Add','Subtract','Divide','Multiply'];
+for(let i=0;i<operatorArr.length;i++){
+let operator=document.createElement('button'); 
+operator.innerHTML=operatorArr[i];
+operator.setAttribute('id',operatorArr[i])
+operator.innerText=operatorArr[i]
+button_div.append(operator)
+
+
+operator.addEventListener('click',function(e){
+    let operation=e.target.innerHTML.toLowerCase();
+   let result= performOperations(operation);
+alert(`Result :- ${result}`)
+
+
+  // alert()
+}) 
+
+ } 
+
+
+// attributes
+num1.placeholder='enter 1st Number';
+num2.placeholder='enter 2nd Number';
+
+function performOperations(operation){
+  
+    
+      
+switch(operation){
+    case 'add':
+        return parseFloat(num1.value)+parseFloat(num2.value);
+        case 'subtract':
+            return parseFloat(num1.value)-parseFloat(num2.value);
+            case 'multiply':
+                return parseFloat(num1.value)*parseFloat(num2.value);
+                case 'divide':
+                    if(num1>0){
+                        return parseFloat(num1.value)/parseFloat(num2.value);
+                    }
+                    else{
+                        return 'it is not divisible'
+                    }
+                    
+}
+
+}
+
+// catching tags
+
+let container=document.getElementById('container');
+let separateContainer=document.getElementById('separateContainer')
+
+
+// appending
+separateContainer.append(num1,num2)
+container.append(button_div)
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+       display: flex;
+       justify-content: center;
+       font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        
+    }
+    #main{
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-content: center;
+        padding: 10px;
+        background-color: rgb(236, 226, 250);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 10px;
+        width: auto;
+        border-radius: 20px;
+    }
+    
+   .inner_div{
+    background-color: white;
+    border: none;
+    align-items: center;
+    text-align:  center;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-wrap:balance;
+    border-radius: 15px;
+    line-height: 20px;
+    
+   }
+   .inner_div>div{
+    border:none;
+    width: 30px;
+    padding: 30px;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color:rgb(236, 226, 250);
+    border-radius: 5px;
+    padding: 2px;
+   }
+   .inner_div>p+p>b{
+color: rgb(103, 48, 255);
+   }
+</style>
+<body><div>
+    <h1>Hiring Facts</h1>
+    <div id="main">
+        <div class="inner_div">
+            <div><img style="width: 20px;"  src="https://cdn-icons-png.flaticon.com/128/3775/3775203.png" alt=""></div>
+               
+            <p>Hiring Process</p>
+            <p><b> < 3 Days</b></p>
+        </div>
+        <div class="inner_div">
+            <div><img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/128/5860/5860155.png" alt=""></div>
+            <p>Offer Acceptance</p>
+            <p><b>90%</b></p>
+        </div>
+        <div class="inner_div">
+            <div><img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/128/4880/4880676.png" alt=""></div>
+            <p> Retention Rate</p>
+            <p><b>93%</b></p>
+        </div>
+        <div class="inner_div">
+            <div><img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/128/33/33308.png" alt=""></div>
+            <p> Hiring Partners</p>
+            <p><b>4000+</b></p>
+        </div>
+        <div class="inner_div">
+            <div><img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/128/2370/2370264.png" alt=""></div>
+            <p>Year Round Availability</p>
+        </div>
+    </div></div>
+</body>
+</html>

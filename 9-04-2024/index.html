@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=[1,2,3,4];
+    let obj={
+        name:"tanishka",
+        age:20,
+        roll_no:3049
+    }
+    
+  localStorage.setItem("arr",JSON.stringify(arr));
+ let get= JSON.parse(localStorage.getItem("arr"));
+console.log(typeof get)
+
+localStorage.setItem('obj',JSON.stringify(obj))
+let getObj=JSON.parse(localStorage.getItem('obj'))
+console.log(getObj)
+localStorage.removeItem('arr')
+</script>
+</html>
