@@ -60,10 +60,15 @@ async function PriceFilter() {
 
 async function handleCategory() {
   let CatVal = category.value; //taking the category value
+ 
   try {
     let res = await fetch("https://fakestoreapi.com/products");
     let data = await res.json();
-    let newData = data.filter((ele) => ele.category == CatVal); //checking if CatVal is preset in data or not
+    if(CatVal==='all Products'){// checks if catValue is === 'all Product'
+return displayData(data)
+
+    }
+    let newData = data.filter((ele) => ele.category === CatVal); //checking if CatVal is preset in data or not
     displayData(newData);
   } catch (error) {
     console.log(error);
