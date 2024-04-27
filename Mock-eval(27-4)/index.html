@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+margin: 0%;
+font-family: Arial, Helvetica, sans-serif;
+align-items: center;
+text-align: center;
+    }
+    nav{
+        background-color: rgb(110, 110, 110);
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
+select{
+    padding: 5px;
+}
+#container{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+#container>div{
+padding: 10px;
+border-radius: 10px;
+border: 1px solid rgb(173, 173, 173) ;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+img{
+    width: 200px;
+    height: 150px;
+}
+
+</style>
+<body>
+    <nav>
+        <div>
+<h1>Product Listing Page</h1>
+        </div>
+
+        <div style=" display: flex;margin: 30px;">
+       <div>
+        <select name="" id="category" >
+            <option value="men's clothing">men's clothing</option>
+            <option value="women's clothing">women's clothing</option>
+            <option value="jewelery">jewelery</option>
+            <option value="electronics">electronics</option>
+            
+        </select>
+       </div>
+       <form >
+        
+        <input type="text" name="" id="search" placeholder="Search products..." >
+        <!-- <input type="submit" placeholder="search"> -->
+       </form>
+        </div>
+
+        <div style=" margin: 30px;" >
+            <select name="" id="price" > 
+            <option value="desc">Price:Low to High</option>
+            <option value="asc"> Price: High to Low</option></select>
+           
+           
+        </div>
+    </nav>
+
+    <div id="container">
+
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
