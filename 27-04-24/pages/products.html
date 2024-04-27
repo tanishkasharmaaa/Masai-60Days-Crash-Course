@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #container > div {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        h3#username {
+            text-align: right;
+            margin-right: 20px;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+</style>
+<body>
+    <div style="display: flex;justify-content: space-between;">
+        <div><h1>Products Page</h1></div>
+    <div ><h3 id="username"></h3></div>
+</div>
+
+    <div id="container">
+
+    </div>
+    <div class="pagination">
+        <button id="prev">Previous</button>
+        <div id="page">1</div>
+        <button id="next">Next</button>
+    </div>
+</body>
+<script src="../js/product.js"></script>
+</html>
