@@ -21,27 +21,26 @@ async function handleSearch() {
   try {
     // fetching the data
     let res = await fetch("https://fakestoreapi.com/products");
-    let data = await res.json();
-    if (search == " ") {
-      // checking if search input empty then
+    let data = await res.json();// converting in json format
+    if (search == " ") {// checking if search input empty then
       return displayData(data); // display complete data
     }
 
     let newData = data.filter((ele) =>
       ele.title.toLowerCase().includes(search)
     ); //checking if ele title is included in the data
-    displayData(newData); // sending newData (filtered)data to display data
-  } catch (error) {
+    displayData(newData); // passing newData (filtered)data to display data
+  } catch (error) {// cating the error here
     console.log(error);
   }
 }
 // price filter
 async function PriceFilter() {
-  let val = priceFilter.value;
-  console.log(val);
+  let val = priceFilter.value; // get value of priceFilter
+  
   try {
     let res = await fetch("https://fakestoreapi.com/products");
-    let data = await res.json();
+    let data = await res.json();// converting in json format
     let newData = data.sort(function (a, b) {
       if (val === "asc") {
         // checking if val is 'asc'
@@ -52,8 +51,8 @@ async function PriceFilter() {
         return b.price - a.price; // then return price from b(high) to a(low)
       }
     });
-    displayData(newData);
-  } catch (error) {
+    displayData(newData);// passing data from display newData
+  } catch (error) {// catching error here
     console.log(error);
   }
 }
@@ -63,14 +62,14 @@ async function handleCategory() {
  
   try {
     let res = await fetch("https://fakestoreapi.com/products");
-    let data = await res.json();
+    let data = await res.json(); // converting in json format
     if(CatVal==='all Products'){// checks if catValue is === 'all Product'
-return displayData(data)
+return displayData(data)// passing data from display data
 
     }
     let newData = data.filter((ele) => ele.category === CatVal); //checking if CatVal is preset in data or not
-    displayData(newData);
-  } catch (error) {
+    displayData(newData);// passing data from display data
+  } catch (error) {// catching error
     console.log(error);
   }
 }
@@ -78,9 +77,9 @@ return displayData(data)
 async function getData(url) {
   try {
     let res = await fetch(url);
-    let data = await res.json();
-    displayData(data);
-  } catch (error) {
+    let data = await res.json();// converting in json format
+    displayData(data);// passing data from display data
+  } catch (error) {// catching error here
     console.log(error);
   }
 }
