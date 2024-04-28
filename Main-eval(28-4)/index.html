@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:  center;
+        align-items: center;
+       
+    }
+    table{
+        width: 100%;
+    }
+    thead{
+        background-color: rgb(194, 194, 194);
+        padding: 10px;
+    }
+  tbody>tr>td{
+    padding: 5px;
+  }
+  button{
+    padding: 10px;
+  }
+</style>
+<body>
+    <h1>Employee Management System</h1>
+<div>
+    <div>
+        <label for="">Filter by Department
+            <select name="" id="department">
+                <option value="">--Select Department--</option>
+                <option value="hr">hr</option>
+                <option value="finance">finance</option>
+                <option value="marketing">marketing</option>
+                <option value="engineering">engineering</option>
+                <option value="operations">operations</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="">Filter by Gender
+            <select name="" id="gender">
+                <option value="">--Select gender--</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="">Sort by Salary
+            <select name="" id="salary">
+                <option value="">--Select order--</option>
+                <option value="asc">low to high</option>
+                <option value="desc">high to low</option>
+            </select>
+        </label>
+    </div>
+</div>
+    <table>
+        <thead>
+            <tr>
+            <th><b>S.no</b></th>
+            <th><b>Name</b></th>
+            <th><b>Gender</b></th>
+            <th><b>Department</b></th>
+            <th><b>Salary</b></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
