@@ -10,11 +10,17 @@
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-      
+      //Taking caught hold of root element from DOM
 let root=document.getElementById('root');
+
+// Define the JSX element
 let element=<React.Fragment>
     <p>React is a javascript library</p>
-    <div className='main'>
+
+    {/*first para*/}
+
+    <div className='main' style={{border:'1px solid',width:'100%',backgroundColor:'beige'}}>
+         {/*Second para*/}
         <p>Click the below button to alert</p>
         <button onClick={()=>{alert('Hello')}}>Alert Hello</button>
         </div>
