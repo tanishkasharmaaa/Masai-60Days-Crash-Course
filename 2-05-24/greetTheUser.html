@@ -13,13 +13,15 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // Your Greeting component code will go here
-
+// Define a functional component called Greeting
     function Greeting({message,name}){
+      // Render a paragraph element containing the message and name props
 return <p>{message},{name}</p>
     }
 
-   
+   // Get the root element from the DOM
     let root =document.getElementById('root');
+    // Render the Greeting component with specified props to the root element
     ReactDOM.createRoot(root).render(<Greeting message="Hello" name="Alice"/>)
 
   </script>

@@ -24,9 +24,13 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // Your ItemList component code will go here
+
+    // Get the root element from the DOM
 let root=document.getElementById('root')
+
+// Define the Gallery component
     function Gallary({children}){
-     
+     // Map over the children and wrap each one in a div, adding a key prop for React's internal reconciliation
        return   children.map((ele,i)=>{
          return (<div key={i}>
         {ele}
@@ -35,9 +39,12 @@ let root=document.getElementById('root')
        
  
     }
+    // Define the App component
     function App(){
+       // Render the Gallery component with a list of images as children
 return(
     <Gallary>
+       {/* Each image is passed as a child */}
       <img src="https://i.pinimg.com/736x/60/63/da/6063da107454d50c1d7786cc2c2bac75.jpg" alt=""/>
       <img src="https://i.pinimg.com/736x/1b/54/fd/1b54fdb78829776f9ff5d9229c63c03c.jpg" alt=""/>
       <img src="https://i.pinimg.com/736x/e0/23/ec/e023ec23f430e4d5273bc51e193e9f2a.jpg" alt=""/>
@@ -50,6 +57,7 @@ return(
     </Gallary>
 )
     }
+    // Render the App component to the root element in the DOM
     ReactDOM.createRoot(root).render(<App/>)
   </script>
 </body>
