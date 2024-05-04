@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<style>
+    #root{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) ;
+        grid-gap: 1%;
+    }
+    img{
+        width: 400px;
+        height: 300px;
+        
+    }
+</style>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your ItemList component code will go here
+let root=document.getElementById('root')
+    function Gallary({children}){
+     
+       return   children.map((ele,i)=>{
+         return (<div key={i}>
+        {ele}
+        </div>  ) 
+          }) 
+       
+ 
+    }
+    function App(){
+return(
+    <Gallary>
+      <img src="https://i.pinimg.com/736x/60/63/da/6063da107454d50c1d7786cc2c2bac75.jpg" alt=""/>
+      <img src="https://i.pinimg.com/736x/1b/54/fd/1b54fdb78829776f9ff5d9229c63c03c.jpg" alt=""/>
+      <img src="https://i.pinimg.com/736x/e0/23/ec/e023ec23f430e4d5273bc51e193e9f2a.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/00/64/4b/00644bb22f723ef86cdca7304cd1faa9.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/33/b0/23/33b023140fe2bd6a80203995bae9500f.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/41/0a/f6/410af61e6195da0244875dcc5be7c48c.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/cd/61/2c/cd612cb00864943d7ec549a8476a2a40.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/ae/c3/12/aec31203870828522986c1a7ba3ba482.jpg" alt=""/>
+      <img src="https://i.pinimg.com/474x/38/99/00/389900dd859b26489093fb2df80cebf3.jpg" alt=""/>
+    </Gallary>
+)
+    }
+    ReactDOM.createRoot(root).render(<App/>)
+  </script>
+</body>
+</html>
