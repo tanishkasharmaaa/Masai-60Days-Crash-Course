@@ -1,0 +1,323 @@
+{
+  "loginInfo": [
+    {
+      "id": 1,
+      "name": "Tanishka",
+      "email": "anjanasharma8448766174@gmail.com",
+      "password": "tanishka123"
+    },
+    {
+      "id": 2,
+      "name": "Mani",
+      "email": "m@gmail",
+      "password": "123"
+    },
+    {
+      "id": 82,
+      "name": "Mahima",
+      "email": "mahima@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 7,
+      "name": "Mahi",
+      "email": "mahima@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "Products": [
+    {
+      "id": 1,
+      "title": "SmartPhone",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+      "price": 150000,
+      "ratings": 5
+    },
+    {
+      "id": 2,
+      "title": "TV",
+      "src": "https://5.imimg.com/data5/SELLER/Default/2023/4/299765792/GM/GW/BT/6158633/50-inch-smart-android-led-tv-500x500.jpg",
+      "price": 2500000,
+      "ratings": 4
+    },
+    {
+      "id": 3,
+      "title": "Laptop",
+      "src": "https://images-cdn.ubuy.co.in/633b75b241637808af7d4688-asus-laptop-l510-ultra-thin-laptop.jpg",
+      "price": 35000,
+      "ratings": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Washing Machine",
+      "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
+      "price": 20000,
+      "ratings": 3.2
+    },
+    {
+      "id": 5,
+      "title": "Microwave oven",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiYVs3xse5zH7hhmnIDtU6ZchYBpCOuid00Gev16kbQ&s",
+      "price": 23000,
+      "ratings": 3.8
+    },
+    {
+      "title": "TXOR HARPER, M5 Black Smart Fitness Band  (Black Strap, Size : Standard)",
+      "src": "https://rukminim2.flixcart.com/image/312/312/ktx9si80/smart-band-tag/o/n/i/tft-lcd-no-free-10-yes-yes-m5-smart-fitness-band-android-ios-v-t-original-imag75xhjjqzuzrq.jpeg?q=70",
+      "price": "1200000",
+      "ratings": 4,
+      "id": 6
+    },
+    {
+      "title": "Selfie Stick",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/tripod/n/y/b/-original-imagrfuugbuvfsrn.jpeg?q=70",
+      "price": 14000,
+      "ratings": 0,
+      "id": 7
+    },
+    {
+      "title": "Hold Up selfie Stick",
+      "src": "https://rukminim2.flixcart.com/image/612/612/kwl0akw0/selfie-stick/a/n/2/3-selfie-stick-with-fill-light-in-3-mode-pack-of-1-200-techflix-original-imag98dgh5yxwujg.jpeg?q=70",
+      "price": "13000",
+      "ratings": 1,
+      "id": 8
+    },
+    {
+      "title": "Beautiful Pink Nude Kurti",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/4/0/o/-original-imaguehzjhcr7gsn.jpeg?q=70",
+      "price": "100000",
+      "ratings": 0,
+      "id": 9
+    },
+    {
+      "title": "Flare Ethnic Skirt",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/h/a/8/free-emz01958-emeros-original-imagnfk65dbbgv9a.jpeg?q=70",
+      "price": "2000",
+      "ratings": 4,
+      "id": 10
+    },
+    {
+      "title": "Pink Banarasai Saari",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/l/a/1/free-fk-ys-maliya-pink-yashika-unstitched-original-imagwfgftx8qyenv.jpeg?q=70",
+      "price": "45000",
+      "ratings": 1,
+      "id": 11
+    },
+    {
+      "title": "Floral Kurti",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/y/d/x/s-sa-rasa-220-sa-rasa-original-imagq2w4sh6w6t6s.jpeg?q=70",
+      "price": "30000",
+      "ratings": 4,
+      "id": 12
+    },
+    {
+      "title": "ALYNE FISHTAIL Nylon Blend Petticoat  (3XL)",
+      "src": "https://rukminim2.flixcart.com/image/612/612/kp036vk0/shapewear/n/c/d/xl-sc-pc-flare-3101-black-scube-designs-original-imag3bdadu8hzrxb.jpeg?q=70",
+      "price": "5000",
+      "ratings": 1,
+      "id": 13
+    },
+    {
+      "title": "Unstiched Suits",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/fabric/s/g/c/yes-2-m-unstitched-2-m-2-5-m-1587-thira-original-imagmbefx6kgwstc.jpeg?q=70",
+      "price": "12000",
+      "ratings": 4,
+      "id": 14
+    },
+    {
+      "title": "Mama Earth Rice face Wash ",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-face-wash/m/g/w/foam-100-rice-face-wash-with-rice-water-niacinamide-for-glass-original-imagh2ejtvgdffng.jpeg?q=70",
+      "price": "500",
+      "ratings": 3,
+      "id": 15
+    },
+    {
+      "title": "Himalya purifying neem face wash",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/face-wash/o/g/c/-original-imagufyphw3gcfwg.jpeg?q=70",
+      "price": "300",
+      "ratings": 3,
+      "id": 16
+    },
+    {
+      "title": "Pillow set",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-pillow/p/t/j/15-blue-ttt-6-6-blue-ttt-6-villagers-original-imagz6xvkdqffhhz.jpeg?q=70",
+      "price": "15000",
+      "ratings": 2,
+      "id": 17
+    },
+    {
+      "title": "Blanket",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/blanket/h/k/z/yellow-box-comf-yellow-box-comf-homerica-original-imahybhdgbsg9zqq.jpeg?q=70",
+      "price": "6000",
+      "ratings": 4,
+      "id": 18
+    },
+    {
+      "title": "Budha Painting",
+      "src": "https://rukminim2.flixcart.com/image/612/612/ktn9pjk0/painting/k/p/t/18-3-sanfjm32427-saf-original-imag6y75jmuhrhfc.jpeg?q=70",
+      "price": "7000",
+      "ratings": 4,
+      "id": 19
+    },
+    {
+      "title": "Radha Krishna Painting",
+      "src": "https://rukminim2.flixcart.com/image/612/612/kzrbiq80/painting/p/a/p/30-5-sanfpnls32232-saf-original-imagbpfvhzmvqxza.jpeg?q=70",
+      "price": "10000",
+      "ratings": 2,
+      "id": 20
+    },
+    {
+      "title": "Motivational painting",
+      "src": "https://rukminim2.flixcart.com/image/612/612/jz8qf0w0/painting/g/x/u/sasd26n-saf-original-imafj22hrmprfads.jpeg?q=70",
+      "price": "100000",
+      "ratings": 2,
+      "id": 21
+    },
+    {
+      "title": "Beautiful Moon Painting",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/wallpaper/9/h/i/66-10-1-diamond-painting-kit-30-40cm-bright-moon-diamond-original-imagu8z7xphtwzub.jpeg?q=70",
+      "price": "2000",
+      "ratings": 2,
+      "id": 22
+    },
+    {
+      "title": "When I'm her",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/e/i/f/when-i-m-her-original-imagyx8y2yywhmzy.jpeg?q=70",
+      "price": 8000,
+      "ratings": 2,
+      "id": 23
+    },
+    {
+      "title": "The Time Machine",
+      "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/z/k/h/the-time-machine-deluxe-hardbound-edition-original-imagy326muyqragx.jpeg?q=70",
+      "price": "3000",
+      "ratings": 2,
+      "id": 24
+    },
+    {
+      "title": "",
+      "src": "",
+      "price": "",
+      "ratings": 4,
+      "id": 25
+    }
+  ],
+  "allUsersCart": {
+    "Mahi": [
+      {
+        "id": 4,
+        "title": "Washing Machine",
+        "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
+        "price": 20000,
+        "ratings": 3.2
+      },
+      {
+        "id": 3,
+        "title": "Laptop",
+        "src": "https://images-cdn.ubuy.co.in/633b75b241637808af7d4688-asus-laptop-l510-ultra-thin-laptop.jpg",
+        "price": 35000,
+        "ratings": 4.5
+      },
+      {
+        "id": 5,
+        "title": "Microwave oven",
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiYVs3xse5zH7hhmnIDtU6ZchYBpCOuid00Gev16kbQ&s",
+        "price": 23000,
+        "ratings": 3.8
+      },
+      {
+        "id": 5,
+        "title": "Microwave oven",
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiYVs3xse5zH7hhmnIDtU6ZchYBpCOuid00Gev16kbQ&s",
+        "price": 23000,
+        "ratings": 3.8
+      },
+      {
+        "id": 3,
+        "title": "Laptop",
+        "src": "https://images-cdn.ubuy.co.in/633b75b241637808af7d4688-asus-laptop-l510-ultra-thin-laptop.jpg",
+        "price": 35000,
+        "ratings": 4.5
+      },
+      {
+        "id": 2,
+        "title": "TV",
+        "src": "https://5.imimg.com/data5/SELLER/Default/2023/4/299765792/GM/GW/BT/6158633/50-inch-smart-android-led-tv-500x500.jpg",
+        "price": 25000,
+        "ratings": 4
+      },
+      {
+        "id": 1,
+        "title": "SmartPhone",
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+        "price": 15000,
+        "ratings": 5
+      }
+    ],
+    "Tanishka": [
+      {
+        "title": "Beautiful Moon Painting",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/wallpaper/9/h/i/66-10-1-diamond-painting-kit-30-40cm-bright-moon-diamond-original-imagu8z7xphtwzub.jpeg?q=70",
+        "price": "2000",
+        "ratings": 2,
+        "id": 22
+      },
+      {
+        "id": 1,
+        "title": "SmartPhone",
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkz2kjdQjM6DX7mLSYMtBrQMF_wRCFb-3cxwI5rPg1A&s",
+        "price": 150000,
+        "ratings": 5
+      },
+      {
+        "id": 2,
+        "title": "TV",
+        "src": "https://5.imimg.com/data5/SELLER/Default/2023/4/299765792/GM/GW/BT/6158633/50-inch-smart-android-led-tv-500x500.jpg",
+        "price": 2500000,
+        "ratings": 4
+      },
+      {
+        "title": "Flare Ethnic Skirt",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/h/a/8/free-emz01958-emeros-original-imagnfk65dbbgv9a.jpeg?q=70",
+        "price": "2000",
+        "ratings": 4,
+        "id": 10
+      },
+      {
+        "title": "Beautiful Pink Nude Kurti",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/4/0/o/-original-imaguehzjhcr7gsn.jpeg?q=70",
+        "price": "100000",
+        "ratings": 0,
+        "id": 9
+      },
+      {
+        "title": "Pink Banarasai Saari",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/l/a/1/free-fk-ys-maliya-pink-yashika-unstitched-original-imagwfgftx8qyenv.jpeg?q=70",
+        "price": "45000",
+        "ratings": 1,
+        "id": 11
+      },
+      {
+        "title": "Himalya purifying neem face wash",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/face-wash/o/g/c/-original-imagufyphw3gcfwg.jpeg?q=70",
+        "price": "300",
+        "ratings": 3,
+        "id": 16
+      },
+      {
+        "title": "When I'm her",
+        "src": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/e/i/f/when-i-m-her-original-imagyx8y2yywhmzy.jpeg?q=70",
+        "price": 8000,
+        "ratings": 2,
+        "id": 23
+      },
+      {
+        "id": 4,
+        "title": "Washing Machine",
+        "src": "https://whirlpoolindia.vtexassets.com/arquivos/ids/167574-1200-auto?v=638320917724870000",
+        "price": 20000,
+        "ratings": 3.2
+      }
+    ]
+  }
+}

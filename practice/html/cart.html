@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-gap: 10px;
+        align-items: center;
+    }
+    #container>div{
+        border: 1px solid rgb(158, 158, 158);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+padding: 10px;
+align-items: center;
+text-align: center;
+    }
+    img{
+        border-radius: 10px;
+        width: 200px;
+        height: 150px;
+    }
+</style>
+<body>
+    <h1>Cart Page</h1>
+    <h3 id="username"></h3>
+    <h3 id="cart_Total"></h3>
+<div id="container">
+
+</div>
+</body>
+<script src="../js/cart.js"></script>
+</html>

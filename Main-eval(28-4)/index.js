@@ -28,29 +28,23 @@ SelDeptartment.addEventListener("change", function () {
   selectDepartment();
 });
 
-async function selectSalary(start) {
+ function selectSalary(data) {
  
-  let val = SelSalary.value;
-  try {
-    let res = await fetch(
-      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${start}&limit=10`
-    );
-    let data = await res.json();
-    let finalData = data.data;
+ console.log(data)
+ 
+    // let finalData = data;
    
-    let filterSalary = finalData.sort(function (a, b) {
-      if (val === "asc") {
-        return a.salary - b.salary;
-      }
-      if (val === "desc") {
-        return b.salary - a.salary;
-      }
-    });
-    DisplayData(filterSalary);
+    // let filterSalary = finalData.sort(function (a, b) {
+    //   if (val === "asc") {
+    //     return a.salary - b.salary;
+    //   }
+    //   if (val === "desc") {
+    //     return b.salary - a.salary;
+    //   }
 
-  } catch (error) {
-    console.log(error);
-  }
+     
+    // })
+    //  DisplayData(filterSalary)
 }
 
 async function selectGender() {
@@ -125,50 +119,26 @@ function DisplayData(data) {
 
 
 
-async function NextPage(){
-   ++StartPage
+async function PreviousPage(){
   try {
-    let res=await fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${StartPage}&limit=10`);
-let data=await res.json();
-let total=data.totalPages;
-if(StartPage<total){
- next.disabled=false
-}
-
-if(StartPage==total){
- next.disabled=true
-}
-
-let finalData=data.data;
-DisplayData(finalData)
-selectSalary(StartPage)
-
+    let res=await fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${++StartPage}&limit=10`);
+    let data=await res.json();
+    
+    DisplayData(data.data)
+    selectSalary(data.data)
   } catch (error) {
     console.log(error)
-  } 
+  }
 }
 
 async function PreviousPage(){
-   StartPage--
-try {
-        let res=await fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${StartPage}&limit=10`);
+  try {
+    let res=await fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${StartPage--}&limit=10`);
     let data=await res.json();
-    let total=data.totalPages;
-    if(0>StartPage<total){
-    previous.disabled=false
-    }
-if(StartPage<=0){
-previous.disabled=true
-    }
-//     if(StartPage<=total){
-//   next.disabled==false
-//     }
-    let finalData=data.data;
-    DisplayData(finalData)
-selectSalary(StartPage)
-
-      } catch (error) {
-        console.log(error)
-      } 
-   
+    
+    DisplayData(data.data)
+    selectSalary(data.data)
+  } catch (error) {
+    console.log(error)
+  }
 }
