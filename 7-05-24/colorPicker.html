@@ -4,82 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
+    <style>
+      body{
+        width: 100%;
+       display: flex;
+       justify-content: center;
+      background-color: rgb(255, 250, 243);
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      body>div{
+        width: 500px;
+        height: 300px;
+      }
+      #display{
+        width: 500px;
+        height: 300px;
+        border:  solid black;
+        display: flex;
+        justify-content:  center;
+       align-items: center;
+       text-align: center;
+      }
+      img{
+        width: 200px;
+      }
+      input{
+        width: 100%;
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
   </body>
+  <link rel="stylesheet" href="../images/anime.png">
   <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
   <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // Your  code will go here
     
-    function Counter({count,inc,dec,reset}){
+    function App(){
 
-return(
-    <div>
-        <h1>Counter:-{count}</h1>
-        <button onClick={inc}>Icrement by 1</button>
-        <button onClick={dec}>Decrement by 1</button>
-        <button onClick={reset}>Reset</button>
-        </div>
-)
+      // state variable to store the selected color
+      let[color,setColor]=React.useState('');
+
+      //function to handle color change
+      function handleChange(e){
+        // updating the color state with new value selected by the user
+setColor(e.target.value);
+
+      }
+      // return the jsx representing the component
+      return(
+        <div>
+          {/* Title */}
+          <div style={{display:'flex',justifyContent:'center',textAlign:'center'}}><h1>Change the Background color of Anime</h1></div>
+           {/*color picker input*/}
+          <div> <input type="color" value={color}  onChange={handleChange}/></div>
+         
+         {/* Display area with background color based on the selected color */}
+          <div id="display" style={{backgroundColor:color}} >
+               {/* Image */}
+            <img src="../images/anime.png" alt=""/>
+            </div>
+          </div>
+      )
     }
-
-function App(){
-  let [countOnGoingTrip,setCountOnGoingTrip]=React.useState(12);
-  let [count,setCount]=React.useState(0);
-  let [names,setName]=React.useState("");
-  let [ages,setAge]=React.useState(0);
-  let [submitName,setSubmitName]=React.useState("");
-  let [submitAge,setSubmitAge]=React.useState(0);
-  function trips(){
-setCountOnGoingTrip(countOnGoingTrip+1)
-console.log(countOnGoingTrip)
-  }
-  function increment(){
-    setCount(count+1)
-  }
-
-  function decrement(){
-    setCount(count-1)
-  }
-  function reset(){
-    setCount(0)
-  }
-
-  function handleChange(e){
- let {name,value}=e.target
- if (name === 'name') {
-      setName(value);
-    } else if (name === 'age') {
-      setAge(parseInt(value));
-    }
-// console.log(names,ages)
-  }
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Handle form submission here, such as sending data to a server or performing other actions
- setSubmitName(names)
- setSubmitAge(ages)
-  }
-return (<div>
-       <h1>On Going Trips :- {countOnGoingTrip}</h1>
-       <button onClick={trips}>Increase Count of Trips</button>
-       <hr/>
-    <Counter count={count} inc={increment} dec={decrement} reset={reset}/>
-    <Counter count={count} inc={increment} dec={decrement} reset={reset}/>
-       <hr/>
-       <form action="" onSubmit={handleSubmit}>
-         <input type="text" placeholder='name' name='name' onChange={handleChange} value={names} />
-        <input type="text" placeholder='age' name='age' onChange={handleChange} value={ages} />
-        <button >Submit</button></form>
-       
-        </div>)
-
-}
-let root=document.getElementById('root')
-ReactDOM.createRoot(root).render(<App/>)
+    // rendering the app component to the root element
+let root=document.getElementById('root');
+  ReactDOM.createRoot(root).render(<App/>)
 
   </script>
 </html>
