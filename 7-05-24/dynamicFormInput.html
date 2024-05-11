@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Form</title>
+</head>
+<style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    #root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #008cba;
+    }
+
+    .hobby-input {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .btn-add {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-add:hover {
+      background-color: #45a049;
+    }
+
+    .btn-remove {
+      background-color: #f44336;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-remove:hover {
+      background-color: #da190b;
+    }
+
+    .btn-submit {
+      background-color: #008cba;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #0077a3;
+    }
+
+   
+
+   
+</style>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    let { useState } = React;
+    function App() {
+      let [hobbies, setHobbies] = useState([''])
+      
+function handleAddField(){
+  let newHobby=''
+setHobbies([...hobbies,newHobby]);
+
+}
+
+      function handleChange(i,e){
+  const updatedValue=[...hobbies];
+    updatedValue[i]=e;
+    console.log(i)  
+setHobbies(updatedValue)  
+                       
+      }
+
+      function handleSubmit(e){
+        e.preventDefault();
+        console.log('Hobbies :',hobbies);
+        
+      }
+
+      function handleRemove(i){
+let del=hobbies.filter((_,index)=>index!==i)
+setHobbies(del)
+      }
+      return <div>
+        <h1>Make your hobbies list</h1>
+        <form action="" onSubmit={()=>handleSubmit()}>
+          {hobbies.map((ele, i) => (
+            <div key={i}>
+              <input type="text" placeholder='hobby' value={ele} onChange={(e)=>handleChange(i,e.target.value)}/>
+               {i!==0&&(
+            <button onClick={()=>handleRemove(i)}>Remove</button>
+          )}
+            </div>
+            
+          ))}
+         <div id='buttons'>
+           <button type='button' onClick={()=>handleAddField()}>Add Hobbies</button>
+        <button type='submit'>Submit</button></div>
+        </form>
+       
+      </div>
+    }
+    let root = document.getElementById('root')
+    ReactDOM.createRoot(root).render(<App />)
+  </script>
+</body>
+
+</html>
