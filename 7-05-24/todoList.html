@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  td button {
+    padding: 6px 12px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  td button:hover {
+    background-color: #218838;
+  }
+
+  .status-button {
+    background-color: #17a2b8;
+  }
+
+  .status-button:hover {
+    background-color: #138496;
+  }
+
+  select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+</style>
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  // Your  code will go here
+  let { useState } = React
+  function App() {
+
+    let [task, setTask] = useState({ title: '', completion: false })
+    let [submitTask, setSubmitTask] = useState([]);
+let [comp,setComp]=useState(false);
+let[filter,setFilter]=useState('');
+    function handleChange(e) {
+      let { name, value, type, checked } = e.target;
+      let newValue = type === 'checkbox' ? checked : value;
+      setTask({ ...task, [name]: value })
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      setSubmitTask((prev) => [...prev, task])
+      setTask({title: '', completion: false })
+    }
+    function handleStatus(i){
+  let updateStatus=[...submitTask];
+  updateStatus[i].completion=!updateStatus[i].completion;
+  setSubmitTask(updateStatus)
+    } 
+
+    function handleRemove(i){
+let del=submitTask.filter((_,index)=>index!==i)
+setSubmitTask(del)
+    }
+function handleFilter(e){
+  setFilter(e.target.value)
+
+}
+function filteredData(){
+  if(filter=='all'){ return submitTask;}
+if(filter=='active'){ return submitTask.filter(task=>!task.completion);}
+if(filter=='complete'){ return submitTask.filter(task=>task.completion)}
+return submitTask
+}
+
+
+
+    return <div className='container'>
+      <div className='input-container'>
+      <input type="text" name='title' value={task.title} onChange={(e) => handleChange(e)} />
+      <input type="submit" onClick={(e) => handleSubmit(e)} />
+
+     <select  value={filter} onChange={(e)=>handleFilter(e)} >
+     <option value="">--Status--</option>
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="complete">Completed</option>
+      </select>
+</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Remove</th>
+            </tr></thead>
+        <tbody>
+          {filteredData().map((ele,i)=>(
+            <tr key={i}>
+            <td>{ele.title}</td>
+            <td><button className='status-button' onClick={()=>handleStatus(i)}>{ele.completion?'Completed':'Not Completed'}</button></td>
+            <td><button onClick={()=>handleRemove(i)}>Remove</button></td>
+            </tr>
+          ))}
+         
+          </tbody>
+      </table>
+    </div>
+  }
+  const root = document.getElementById('root')
+  ReactDOM.createRoot(root).render(<App />)
+</script>
+
+</html>
