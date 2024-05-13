@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+
+        .container {
+            /* max-width: 600px; */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .user-profile {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+        }
+
+        .user-profile img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .user-profile p {
+            margin: 5px 0;
+        }
+.userDiv{
+display: grid;
+
+}
+  </style>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/babel">
+    
+    // Your  code will go here
+    let{useState}=React;
+ 
+function UsersProfile({data}){
+    
+return(
+    <div className='container'>
+        {data.length==[]?(<div style={{ display: 'flex', justifyContent: 'center' }}><div style={{ textAlign: 'center' }}><h1>No user is here by this name</h1></div></div>):(data.map((ele,i)=>(
+<div key={ele.id} className='user-profile'>
+    <img src={ele.avatar} alt=""/>
+    <p><span>Email:</span>{ele.email}</p>
+    <p><span>Username:</span>{ele.first_name}</p>
+    </div>
+        )))}
+        </div>
+)
+}
+    function App(){
+let[data,setData]=useState([]);
+let [search,setSearch]=useState('')
+
+async function getData(){
+   try {
+    let res=await axios.get(`https://reqres.in/api/users`);
+    let res2=await axios.get(`https://reqres.in/api/users?page=2`);
+    
+    setData([...res.data.data,...res2.data.data])
+
+   } catch (error) {
+    console.log(error)
+   }
+}
+
+
+function handleSearch(e){
+setSearch(e.target.value)
+
+}
+
+
+let filterData=data.filter((ele,i)=>ele.first_name.toUpperCase().includes(search.toUpperCase()))
+
+ getData()
+
+        return <div>
+            <div><h1>Users Profile</h1></div>
+           <div >
+            <input type="text" value={search} onChange={(e)=>handleSearch(e)} />
+            
+            </div>
+            <div>
+              <UsersProfile data={filterData}/> 
+                </div>
+            </div>
+    }
+let root = document.getElementById('root')
+    ReactDOM.createRoot(root).render(<App/>)
+  </script>
+</html>

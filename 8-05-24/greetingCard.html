@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=M+PLUS+1+Code:wght@100..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Template</title>
+</head>
+<style>
+    body {
+            font-family: "Oswald", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+
+        #cardCollection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #card {
+            border: solid 1px #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .name {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+</style>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your  code will go here
+    function GreetingCard({ greeting, name }) {
+        return <div id='card'>
+<h1>Dear <span style={{color:'salmon'}}>{name}</span> {greeting} </h1>
+
+        </div>
+    }
+
+    function App() {
+        let cards=[
+            {
+                greeting:'Wish you a very happy birthday I hope you to achieve all your goals',
+                name:'John Doe'
+            },
+            {
+                greeting:'Wish you a very happy marriage anniversary ',
+                name:'Mr.Johnson and Mrs.Johnson'
+            },
+            {
+                greeting:'Congratulations ,for your upcoming future',
+                name:'Lindsey'
+            },
+            {
+                greeting:'Merry Christmas',
+                name:'Jane'
+            },
+            {
+                greeting:'Wish you a very happy marriage anniversary ',
+                name:'Mr.Rahman and Mrs Rahman'
+            }, {
+                greeting:'Congratulations ,for your upcoming future',
+                name:'Sandy'
+            },
+            {
+                greeting:'ish you a very happy birthday I hope you to achieve all your goals',
+                name:'Maria'
+            },
+        ]
+return <div>
+    <div style={{display:'flex',justifyContent:'center'}}><h1>Greeting Cards</h1></div>
+    <div id='cardCollection'>
+{cards.map((ele,i)=>(
+    
+    <GreetingCard greeting={ele.greeting} name={ele.name}/>
+  
+))}
+    </div>
+    </div>
+    }
+    let root = document.getElementById('root')
+    ReactDOM.createRoot(root).render(<App />)
+</script>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+            text-align: left;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let { useState } = React;
+
+function TodoApp(){
+    let[task,setTask]=useState('');
+    let[submitTask,setSubmitTask]=useState([]);
+   let[completion,setCompletion]=useState([])
+    function handleChange(e){
+setTask(e.target.value)
+    }
+    function handleSubmit(e){
+e.preventDefault();
+setSubmitTask([...submitTask,{id:Date.now(),title:task,completed:false}])
+setTask('')
+    }
+    function handleDelete(i){
+setSubmitTask(submitTask.filter((_,index)=>index!==i))
+    }
+   
+function handleTaskCompletion(id){
+  setSubmitTask(
+    submitTask.map((ele)=>{
+       if(ele.id===id){
+        return{...ele,completed:!ele.completed}
+       }
+      return ele
+       
+    })
+    
+  )
+
+}
+return <div className="container">
+    <div><h1>Todo Application</h1></div>
+    <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='Add Task' value={task} onChange={(e)=>handleChange(e)}/>
+        <button type="submit">Submit</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr >
+                    <th>Task</th>
+                    <th>Completion</th>
+                    <th>Delete</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {submitTask.map((ele,i)=>(
+                    <tr key={ele.id}>
+                        <td className={ele.completed?'completed':''}>{ele.title}</td>
+                        <td><label><input type="checkbox" checked={submitTask.completed} onChange={()=>handleTaskCompletion(ele.id)}/>Completed</label></td>
+                        <td><button className="delete-btn" onClick={()=>handleDelete(i)}>Delete</button></td>
+                        </tr>
+                ))}
+                </tbody>
+            </table>
+    </div>
+
+}
+
+      let root = document.getElementById('root')
+ReactDOM.createRoot(root).render(<TodoApp/>)
+    </script>
+</body>
+</html>
