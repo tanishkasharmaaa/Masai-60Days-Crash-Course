@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "id": "43b3",
+      "title": "cleaning",
+      "isCompleted": true,
+      "assignee": "Sebestian"
+    },
+    {
+      "id": "fb98",
+      "title": "gyming",
+      "isCompleted": true,
+      "assignee": "Jose"
+    },
+    {
+      "id": "915a",
+      "title": "javascript",
+      "isCompleted": false,
+      "assignee": "Jonathan"
+    },
+    {
+      "id": "24df",
+      "title": "javascript",
+      "isCompleted": false,
+      "assignee": "Lily"
+    },
+    {
+      "id": "45f5",
+      "title": "javascript",
+      "isCompleted": true,
+      "assignee": "Jose"
+    },
+    {
+      "id": "8971",
+      "title": "coding",
+      "isCompleted": true,
+      "assignee": ""
+    }
+  ]
+}
