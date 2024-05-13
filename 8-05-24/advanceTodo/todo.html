@@ -137,31 +137,37 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/babel">
 
-  // Your  code will go here
+  // Importing the useState hook from React
   let { useState } = React
+  // Defining the TodoApp component
   function TodoApp() {
+     // Using the useState hook to manage the state of taskInput
     let [taskInput, setTaskInput] = useState({
       title: '',
       isCompleted: false,
       assignee: ''
     })
-
+// Using the useState hook to manage the state of task array
     let [task, setTask] = useState([])
+    // Using the useState hook to manage the state of update flag
     let [update, setUpdate] = useState(false)
+    // Using the useState hook to manage the state of updateForm
     let [updateForm, setUpdateForm] = useState({
       title: '',
       isCompleted: false,
       assignee: ''
     })
+    // Using the useState hook to manage the state of filter
 let [filter,setFilter]=useState('')
+// Using the useState hook to manage the state of filterTaskStatus
 let[filterTaskStatus,setFilterTaskStatus]=useState([])
-
+// Function to handle changes in input fields
     function handleChange(e) {
       let { name, value, type, checked } = e.target;
       let newValue = type === 'checkbox' ? checked : value;
       setTaskInput({ ...taskInput, [name]: newValue })
     }
-
+// Function to handle form submission
     function handleSubmit(e) {
       e.preventDefault()
 
@@ -173,6 +179,7 @@ let[filterTaskStatus,setFilterTaskStatus]=useState([])
           console.log(error)
         })
     }
+    // Function to fetch data from the server
     function handleGetData() {
       axios.get('http://localhost:3000/todos')
         .then(function (response) {
@@ -183,20 +190,19 @@ let[filterTaskStatus,setFilterTaskStatus]=useState([])
         })
 
     }
+    // Function to handle update of a task
     function handleUpdate(i, ele) {
      setUpdate(i)
     }
+    // Function to handle changes in update form fields
     function handleUpdateTask(e,i){
      
 let{name,value,type,checked}=e.target;
 let newValue=type==='checkbox'?checked:value;
-
-
 setUpdateForm({...updateForm,[name]:newValue})
-   
+   }
 
-    }
-
+// Function to handle updating a task
     function handleUpdatedTask(e,i){
 e.preventDefault();
 console.log(task[i].id)
@@ -205,12 +211,14 @@ axios.put(`http://localhost:3000/todos/${task[i].id}`,updateForm)
 .then((res)=>{console.log(res)})
 .catch((err)=>{console.log(err)})
     }
+
+    // Function to filter tasks based on assignee
     function filterTask(e){
 setFilter(e.target.value);
 
     }
 
-   
+    // Function to filter tasks based on assignee
   const filterData=()=>{
     if(filter==''){
       return task
@@ -232,6 +240,7 @@ setFilter(e.target.value);
     }
    
   }
+    // Other filter conditions go here
   function handleShowTaskStatus(){
     axios.get('http://localhost:3000/todos')
         .then(function (response) {
@@ -243,7 +252,7 @@ setFilter(e.target.value);
         })
 
     }
-
+  // Function to handle task deletion
     function handleDelete(id){
 console.log(id)
 axios.delete(`http://localhost:3000/todos/${id} `)
@@ -254,6 +263,7 @@ axios.delete(`http://localhost:3000/todos/${id} `)
           console.log(error)
         })
     }
+      // Rendering the JSX content
     return (
       <div>
         <div><h1>Advance Todo List</h1></div>
