@@ -1,0 +1,14 @@
+{
+  "name": "node.js",
+  "version": "22.4.0",
+  "description": "node.js basics",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tanishka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
