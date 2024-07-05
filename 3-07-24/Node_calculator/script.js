@@ -72,7 +72,7 @@ if(numbers.length!==1){
     process.exit(1)
 }
 let length=numbers[0];
-let randomBytes=crypto.randomBytes(length).toString('binary');
+let randomBytes=crypto.randomInt(length)
 console.log(`Random number of length ${length}: ${randomBytes}`)
 return;
 }
