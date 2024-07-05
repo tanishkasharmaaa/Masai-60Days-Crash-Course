@@ -1,0 +1,15 @@
+Hello I'm Tanishka, a passionate Front-End Developer with [X] years of experience in creating dynamic and responsive web applications.
+Proficient in HTML, CSS, and JavaScript, I excel in crafting intuitive user interfaces and seamless user experiences. My expertise extends to modern frameworks like React, Angular, and Vue.js, allowing me to build robust and scalable applications. I have a keen eye for design and a strong understanding of UX/UI principles. Adept at collaborating with cross-functional teams, I thrive in fast-paced environments. I'm always eager to learn new technologies and stay updated with industry trends. Lets build something amazing together .
+New line added into this file
+New line added into this file [1]
+New line added into this file [2]
+New line added into this file [3]
+New line added into this file [4]
+New line added into this file [6]
+New line added into this file [6]
+New line added into this file [6]
+Hi
+Hi
+Hi
+HiHello
+Hello

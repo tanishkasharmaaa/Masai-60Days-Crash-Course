@@ -1,0 +1,14 @@
+{
+  "name": "node.js",
+  "version": "20.15.0",
+  "description": "Node.js file editior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tanishka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
