@@ -69,7 +69,7 @@ server.delete('/delete/:id', (req, res) => {
 // Parse the ID from the request parameters
   let id = parseInt(req.params.id, 10);
 
- // Filter out the item with the matching ID
+ // Filter out the item with the matching ID and checking status is true
   let filteredTodos = todos.filter((ele) => ele.id !== id&&ele.status!==true);
 
    // Update the parsed data with the filtered todos
