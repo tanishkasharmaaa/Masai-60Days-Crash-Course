@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "weekly evaluation",
+      "status": false
+    },
+    {
+      "id": 2,
+      "title": "weekly evaluation",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "sleep",
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "Redux assignment",
+      "status": false
+    }
+  ]
+}
