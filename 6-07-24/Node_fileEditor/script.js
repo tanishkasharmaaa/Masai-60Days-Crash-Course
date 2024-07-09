@@ -70,7 +70,7 @@ server.delete('/delete/:id', (req, res) => {
   let id = parseInt(req.params.id, 10);
 
  // Filter out the item with the matching ID
-  let filteredTodos = todos.filter((ele) => ele.id !== id);
+  let filteredTodos = todos.filter((ele) => ele.id !== id&&ele.status!==true);
 
    // Update the parsed data with the filtered todos
   parsedData.todos = filteredTodos;
@@ -78,7 +78,8 @@ server.delete('/delete/:id', (req, res) => {
   // Write the updated data back to the file
   fs.writeFileSync('./db.json', JSON.stringify(parsedData, null, 2), "utf-8");
 
-  res.send('Item deleted successfully');
+  res.send('Item with true status deleted successfully ');
+  
 });
 // Route to patch data
 server.patch('/patchData/:id',(req,res)=>{
