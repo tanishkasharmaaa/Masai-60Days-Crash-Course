@@ -6,7 +6,9 @@ export function UpdateTitle(){
     }
     useEffect(()=>{
         update()
-        return()=> document.title='React App'
+        return()=> {
+            document.title='React App'
+        console.log('component mounting')}
     },[])
     return (
         <div>

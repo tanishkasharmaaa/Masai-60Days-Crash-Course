@@ -124,16 +124,22 @@ const quiz = [
   }
 ];
 let{useState}=React;
+
 function Quiz() {
  let[showScore,setShowScore]=useState(0) ;
  let[submit,setSubmit]=useState(false)
  let[selectedOption,setSelectedOption]=useState(Array(quiz.length).fill(''));
 
+
+ 
  function handleSelectedOption(questionIndex,optionIndex){
+  
 let newAns=[...selectedOption];
+
 newAns[questionIndex]=optionIndex;
+
 setSelectedOption(newAns)
-console.log(newAns)
+
  }
  function handleScore(){
   let newScore=0;
@@ -141,6 +147,7 @@ console.log(newAns)
     if(selectedOptionIndex===quiz[questionIndex].index){
       newScore++
     }
+ 
   })
   setShowScore(newScore)
   setSubmit(true)
