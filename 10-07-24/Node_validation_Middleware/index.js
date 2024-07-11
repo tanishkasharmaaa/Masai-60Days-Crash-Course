@@ -7,7 +7,7 @@ const port = 8080;// Define the port number
 server.use(express.json());// Middleware to parse JSON bodies
 // Middleware to validate the request data format
 const middleware = (req, res, next) => {
-  let reqData = req.body;
+  let reqData =req.body;
 
    // Check if the data types of the properties match the required format
   if (
@@ -25,6 +25,7 @@ const middleware = (req, res, next) => {
    
   }
   else{
+    fs.appendFileSync("./res.txt",`Validation failed for data: ${JSON.stringify(reqData)}\n`,"utf-8")
     res.status(400).send('bad request. some data is incorrect.')
   }
   
@@ -54,7 +55,7 @@ let length=readData.data.length;// taking the length of readData.data
 // Write the data to res.txt
   fs.writeFileSync("./res.txt",`Validation check has passed by this data :---- ${JSON.stringify(readData)}`, "utf-8");
   // Send a response indicating successful data submission
-  res.send("Data sent successfully");
+  res.status(200).send("Data sent successfully");
   
 });
 // Start the server and listen on the defined port
