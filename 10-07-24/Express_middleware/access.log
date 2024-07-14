@@ -1,0 +1,8 @@
+GET 200 24 - 14ms : data[iso] HTTP/1.1 /get-users
+GET 200 24 - 5ms : data[iso] HTTP/1.1 /get-users
+GET 200 24 - 3ms : data[iso] HTTP/1.1 /get-users
+GET 200 24 - 3ms : data[iso] HTTP/1.1 /get-users
+POST 404 149 - 14ms : data[iso] HTTP/1.1 /add-users
+POST 404 149 - 7ms : data[iso] HTTP/1.1 /add-users
+POST 404 149 - 4ms : data[iso] HTTP/1.1 /add-users
+DELETE 201 35 - 2ms : data[iso] HTTP/1.1 /user/3
