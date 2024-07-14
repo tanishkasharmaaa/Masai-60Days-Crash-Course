@@ -5,7 +5,7 @@ const path=require('path');
 const port =8080;
 const app=express();
 
-var accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'));
+var accessLogStream=fs.createWriteStream(path.join(__dirname,'src','access.log'));
 morgan.token('response-time',function(req,res){
     return `${Date.now() - req._startTime}ms`
 })
