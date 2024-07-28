@@ -5,6 +5,9 @@ const userSchema=mongoose.Schema({
     age:Number,// Age field , type is Number
     email:String,// Email field , type is string
     gender:String// gender field , type is string
+},
+{
+    versionKey:false
 })
 // create a model from the schema
 const userModel=mongoose.model("user",userSchema);
