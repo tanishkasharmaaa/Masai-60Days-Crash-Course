@@ -1,3 +1,4 @@
+// internal and external moudules and files are importing here
 const mongoose=require("mongoose");
 const express=require("express");
 const port=4000;
@@ -7,7 +8,7 @@ const connection=require("./config/userDB");
 const userRouter=require("./routes/user.route");
 const fs=require("fs");
 
-
+// making connection of server to database
 connection.then(()=>{
     console.log('connected to mongodb');
 
@@ -18,9 +19,9 @@ connection.then(()=>{
 
 
 
-
+// using middleware here
 server.use(userRouter);
-
+// starting server here
 server.listen(port,()=>{
     console.log(`Server is running at port ${port}`)
 })
