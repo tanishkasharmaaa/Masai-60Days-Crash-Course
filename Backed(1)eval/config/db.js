@@ -1,3 +1,3 @@
-const mongoose=require("mongoose");
-const connection=mongoose.connect('mongodb://127.0.0.1:27017/course');
-module.exports=connection
+const mongoose=require("mongoose");// importing mongoose
+const connection=mongoose.connect('mongodb://127.0.0.1:27017/course');// making with mongodb data
+module.exports=connection//exporting connection
