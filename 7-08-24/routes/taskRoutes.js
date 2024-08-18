@@ -10,6 +10,7 @@ const bcrypt = require("bcrypt");
 const managerMiddleware = require("../middleware/managerMiddleware");
 const adminMiddleware = require("../middleware/adminMiddleware");
 const userModel = require("../models/user.model");
+const logger = require("../logger");
 
 taskRoute.use(express.json());
 
@@ -18,7 +19,7 @@ taskRoute.get('/', authMiddleware, async (req, res) => {
     try {
         res.send("Welcome to Task Manager");
     } catch (error) {
-        console.error("Error in GET /:", error);
+        logger.error("Error in GET /:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -32,7 +33,7 @@ taskRoute.get("/task", [authMiddleware, adminMiddleware], async (req, res) => {
         const tasks = await taskModel.find({ userID: userID });
         res.status(200).json(tasks);
     } catch (error) {
-        console.error("Error in GET /task:", error);
+        logger.error("Error in GET /task:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -54,7 +55,7 @@ taskRoute.post('/createTask', [authMiddleware, memberMiddleware], async (req, re
         await task.save();
         res.status(201).json({ message: "Task added successfully", task });
     } catch (error) {
-        console.error("Error in POST /createTask:", error);
+       logger.error("Error in POST /createTask:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -80,7 +81,7 @@ taskRoute.patch('/update/:id', [authMiddleware, memberMiddleware], async (req, r
         await task.save();
         res.status(200).json({ message: 'Task updated successfully', task });
     } catch (error) {
-        console.error("Error in PATCH /update/:id:", error);
+        logger.error("Error in PATCH /update/:id:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -94,7 +95,7 @@ taskRoute.delete('/delete/:id', [authMiddleware, memberMiddleware], async (req, 
         }
         res.status(200).json({ message: "Task deleted successfully", deletedTask });
     } catch (error) {
-        console.error("Error in DELETE /delete/:id:", error);
+        logger.error("Error in DELETE /delete/:id:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -105,7 +106,7 @@ taskRoute.get('/allUserTask', [managerMiddleware, adminMiddleware], async (req, 
         const tasks = await taskModel.find();
         res.status(200).json(tasks);
     } catch (error) {
-        console.error("Error in GET /allUserTask:", error);
+        logger.error("Error in GET /allUserTask:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -119,7 +120,7 @@ taskRoute.get('/total_Avg_Tasks', adminMiddleware, async (req, res) => {
         const avg = total > 0 ? completeTasks.length / total : 0;
         res.status(200).json({ total, averageCompletedTasks: avg, tasksList: tasks });
     } catch (error) {
-        console.error("Error in GET /total_Avg_Tasks:", error);
+        logger.error("Error in GET /total_Avg_Tasks:", error);
         res.status(500).send("Internal server error");
     }
 });
@@ -138,7 +139,7 @@ taskRoute.patch('/toggle-enable/:id', adminMiddleware, async (req, res) => {
 
         res.status(200).send(`User ${user.isEnabled ? 'enabled' : 'disabled'} successfully`);
     } catch (error) {
-        console.error("Error in PATCH /toggle-enable/:id:", error);
+        logger.error("Error in PATCH /toggle-enable/:id:", error);
         res.status(500).send("Internal server error");
     }
 });

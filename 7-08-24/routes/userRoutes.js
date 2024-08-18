@@ -31,7 +31,7 @@ try {
    
     });
 } catch (error) {
-    console.log(error)
+   logger.error(error)
 }
 })
 
@@ -50,7 +50,7 @@ userRouter.post('/login', async(req,res)=>{
   });
    
     } catch (error) {
-      console.log(error)
+      logger.error(error)
     }
 })
 

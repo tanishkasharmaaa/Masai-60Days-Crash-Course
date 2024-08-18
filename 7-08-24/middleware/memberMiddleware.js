@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
+const logger = require("../logger");
 const dotenv = require("dotenv").config(); // Load environment variables from .env file
 
 // Middleware function to check if the user has a "member" role and is enabled
@@ -36,7 +37,7 @@ const memberMiddleware = async (req, res, next) => {
           }
         } catch (error) {
           // Handle any errors that occur during the database query
-          console.error("Error finding user:", error);
+          logger.error("Error finding user:", error);
           return res.status(500).send("Internal server error");
         }
       } else {
@@ -46,7 +47,7 @@ const memberMiddleware = async (req, res, next) => {
     });
   } catch (error) {
     // Handle any errors that occur during the token extraction or verification process
-    console.error("Error in memberMiddleware:", error);
+   logger.error("Error in memberMiddleware:", error);
     res.status(500).send("Internal server error");
   }
 };

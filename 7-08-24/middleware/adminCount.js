@@ -1,3 +1,4 @@
+const logger = require("../logger");
 const userModel = require("../models/user.model");
 
 const adminCount = async (req, res, next) => {
@@ -19,7 +20,7 @@ const adminCount = async (req, res, next) => {
     // If the role is not "admin", continue with the next middleware
     return next();
   } catch (error) {
-    console.error('Error checking admin count:', error);
+   logger.error('Error checking admin count:', error);
     return res.status(500).send('Internal server error');
   }
 };

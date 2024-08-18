@@ -1,0 +1,249 @@
+2024-08-17T23:49:37.450Z [[31merror[39m]: uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-08-17T23:55:27.099Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:23)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:55:43.453Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:14)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:55:44.699Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:14)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:55:46.451Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:15)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:55:48.449Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:55:56.809Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:56:32.222Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:56:51.740Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:56:53.736Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:58:34.255Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-17T23:59:57.952Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-18T00:00:37.792Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-18T00:01:48.163Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-18T00:02:14.884Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-08-18T00:02:51.342Z [[31merror[39m]: uncaughtException: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+Error: Cannot find module 'express-rate-limit'
+Require stack:
+- C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\TANISHKA\Desktop\60 days crash Batch\Masai-60Days-Crash-Course\7-08-24\index.js:12:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
