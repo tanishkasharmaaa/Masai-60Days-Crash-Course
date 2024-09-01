@@ -16,9 +16,9 @@ exports.addOrder = async (req, res) => {
 
     // Create a new order
     let order = new ActiveOrdersModel({
-      orderType,
-      symbol,
-      stock,
+      orderType:orderType.toLowerCase(),
+      symbol:symbol.toLowerCase(),
+      stock:symbol.toLowerCase(),
       quantity,
       minPrice,
       willingPrice,

@@ -13,7 +13,8 @@ stockRouter.patch('/UpdateStockInMarket/:id',adminMiddleware,marketController.up
 stockRouter.delete('/DeleteStockInMarket/:id',adminMiddleware,marketController.deleteStock)
 stockRouter.get('/AllStockInMarket',authMiddleware,marketController.allStocks)
 stockRouter.post('/match', authMiddleware, stockController.match);
-stockRouter.get('/transactionHistory',authMiddleware,marketController.transactionHistory)
+stockRouter.get('/transactionHistory',authMiddleware,marketController.transactionHistory);
+stockRouter.get('/orderManagementBook',authMiddleware,marketController.orderBookManagement)
 
 
 
