@@ -7,7 +7,8 @@ dotenv.config()
 
 exports.register=async(req,res)=>{
     
-    let {name,email,password,balance}=req.body;
+    let {name,email,password,role}=req.body;
+
     try {
         if(!name||!email||!password){
           return  res.status(400).json({message:"Provide complete info"});
@@ -19,7 +20,7 @@ let hashedPassword=await bcrypt.hash(password,5)
        name,
        email,
        password:hashedPassword,
-       balance
+  role
         });
    
         await user.save();
@@ -37,10 +38,10 @@ try {
     let user=await UserModel.findOne({email});
     let check=bcrypt.compare(password,user.password);
 if(check){
-    let accessToken=jwt.sign({name:user.name,userID:user._id,email},process.env.JWT_SECRET_KEY,{algorithm:'HS256'});
+    let accessToken=jwt.sign({role:user.role,userID:user._id,email},process.env.JWT_SECRET_KEY,{algorithm:'HS256'});
     res.status(200).json({message:"Login Successful",accessToken})
 }
 } catch (error) {
-    
+    res.status(500).json({error})
 }
 }

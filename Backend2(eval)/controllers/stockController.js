@@ -3,6 +3,7 @@ const ActiveOrdersModel=require("../models/activeOrders.model")
 const jwt=require("jsonwebtoken");
 const userModel=require("../models/user.model")
 const dotenv=require("dotenv");
+const StockModel = require("../models/stock.model");
 dotenv.config()
 
 exports.addOrder=async(req,res)=>{
@@ -23,6 +24,18 @@ jwt.verify(token,process.env.JWT_SECRET_KEY,async function(err,decode){
         )
 
     try {
+
+        if(orderType==="sell"){
+            let orderToSell=new StockModel({
+                orderType,
+            symbol,
+            stock,
+            quantity,
+            minPrice,
+            willingPrice,
+            userID:userid
+             });
+        }
       let order=new ActiveOrdersModel({
         orderType,
     symbol,
@@ -41,3 +54,5 @@ jwt.verify(token,process.env.JWT_SECRET_KEY,async function(err,decode){
         res.status(500).json({error})
     }
 }
+
+
