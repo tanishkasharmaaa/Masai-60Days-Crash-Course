@@ -1,6 +1,8 @@
 const express = require("express");
 const jwt=require("jsonwebtoken")
 const ActiveOrdersModel = require("../models/activeOrders.model");
+const dotenv=require("dotenv");
+dotenv.config()
 
 exports.addStock = async (req, res) => {
   let { orderType, symbol, stock, quantity, minPrice, willingPrice } = req.body;
@@ -70,3 +72,25 @@ exports.allStocks = async (req, res) => {
     res.status(500).json({ error });
   }
 };
+
+
+exports.transactionHistory=async(req,res)=>{
+  let token = req.headers.authorization.split(" ")[1];
+  let userid;
+  jwt.verify(token, process.env.JWT_SECRET_KEY, async function (err, decode) {
+    if (err) {
+      res.status(400).json({ err });
+    }
+
+    if (decode) {
+      userid = decode.userID;
+     
+    }
+  });
+  try {
+    let transactionHistory=await ActiveOrdersModel.find({userID:userid,status:"complete"})
+    res.status(200).json(transactionHistory)
+  } catch (error) {
+    res.status(400).json({error})
+  }
+}
