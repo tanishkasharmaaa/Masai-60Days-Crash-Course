@@ -25,7 +25,7 @@ exports.addOrder = async (req, res) => {
       userID: userid,
     });
 
-    // Save order to the database
+ 
     await order.save();
     res.status(201).json({ order });
 
@@ -37,7 +37,7 @@ exports.addOrder = async (req, res) => {
 // Matching orders functionality
 exports.match = async (req, res) => {
   try {
-    // Extract and verify JWT token
+  
     let token = req.headers.authorization.split(" ")[1];
     let decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     let userid = decoded.userID;
@@ -93,5 +93,51 @@ exports.match = async (req, res) => {
   } catch (error) {
     console.error("Error during order matching:", error);
     res.status(500).json({ error: 'An error occurred while matching orders' });
+  }
+};
+
+
+
+// Handler to update an existing stock order
+exports.updateStock = async (req, res) => {
+  try {
+   
+    let updatedOrder = await ActiveOrdersModel.findByIdAndUpdate(
+      { _id: req.params.id },
+      req.body,
+      { new: true } 
+    );
+
+   
+    if (!updatedOrder) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
+    res.status(200).json(updatedOrder);
+  } catch (error) {
+   
+    console.error("Error updating order:", error);
+    res.status(500).json({ error: 'Failed to update order' });
+  }
+};
+
+
+
+// Handler to delete a stock order
+exports.deleteStock = async (req, res) => {
+  try {
+   
+    let deletedOrder = await ActiveOrdersModel.findByIdAndDelete({ _id: req.params.id });
+
+   
+    if (!deletedOrder) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
+    res.status(200).json({ message: "Order deleted", deletedOrder });
+  } catch (error) {
+    
+    console.error("Error deleting order:", error);
+    res.status(500).json({ error: 'Failed to delete order' });
   }
 };
