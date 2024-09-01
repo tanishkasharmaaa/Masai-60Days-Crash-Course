@@ -6,7 +6,8 @@ const activeOrdersSchema=mongoose.Schema({
     quantity:{type:Number,required:true},
     minPrice:{type:Number,required:true},
     willingPrice:{type:Number,required:true},
-    userID:{type:mongoose.Schema.Types.ObjectId,ref:"user",required:true}
+    userID:{type:mongoose.Schema.Types.ObjectId,ref:"user",required:true},
+    status:{type:String,enum:["pending","complete"],default:"pending",required:true}
 })
 
 const ActiveOrdersModel=mongoose.model("activeOrder",activeOrdersSchema);
